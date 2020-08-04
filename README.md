@@ -1,10 +1,6 @@
-# Algorithms In Go
- Solutions in Go for the Algorithms in <https://github.com/joncalhoun/algorithmswithgo.com>
+# Module 1: Solutions in Go for the Algorithms
 
-
-# Module 1: Getting started with Algorithms
-
-*NOTE: This README is a collection of my notes for this course. It is NOT a written version of the course, and as such it might not always make sense to you. If anyone wants to submit PRs to help turn this into a written version of the course I'm willing to work with you to do that, but for now it is just my notes.*
+Solutions in Go for the Algorithms in <https://github.com/joncalhoun/algorithmswithgo.com/tree/master/module01>
 
 ## 01 - Intro
 
