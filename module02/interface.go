@@ -24,7 +24,9 @@ func TestInterface(t *testing.T, sortFn func(sort.Interface)) {
 		"random-len50":    rand.Perm(50),
 		"random-len100":   rand.Perm(100),
 		"random-len1000":  rand.Perm(1000),
+		"random-len10000": rand.Perm(10000),
 		"sorted-len10000": intList(10000),
+		"sorted-len1000":  intList(1000),
 	} {
 		t.Run(name, func(t *testing.T) {
 			want := make([]int, len(list))
@@ -54,7 +56,7 @@ func TestInterface(t *testing.T, sortFn func(sort.Interface)) {
 // using the sort.Interface.
 func BenchmarkInterface(b *testing.B, sortFn func(sort.Interface)) {
 	for _, size := range []int{
-		100, 200, 400, 800, 1600, 3200,
+		100, 200, 400, 800, 1600, 3200, 6400, 12800,
 	} {
 		b.Run(fmt.Sprintf("%d", size), func(b *testing.B) {
 			for n := 0; n < b.N; n++ {

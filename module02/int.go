@@ -31,7 +31,7 @@ func TestInt(t *testing.T, sortFn func([]int)) {
 		"random-len50":   rand.Perm(50),
 		"random-len100":  rand.Perm(100),
 		"random-len1000": rand.Perm(1000),
-		// "random-len100000": rand.Perm(100000),
+		"random-len100000": rand.Perm(100000),
 		// "sorted-len100000": intList(100000),
 	} {
 		t.Run(name, func(t *testing.T) {
