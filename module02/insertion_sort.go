@@ -63,20 +63,13 @@ func InsertionSortPerson(people []Person) {
 	}
 }
 
-// InsertionSort uses the standard library's sort.Interface to sort. Try
-// implementing it for practice, but be wary that this particular algorithm is a
-// little tricky to implement this way.
+// InsertionSort sorts the given sortable item using Insertion Sort algorithm
+// https://en.wikipedia.org/wiki/Insertion_sort
 func InsertionSort(list sort.Interface) {
-	for i := 0; i < list.Len(); i++ {
-		for j := 0; j < i; j++ {
-			if list.Less(i, j) {
-				// index i serves as a "buffer" - a place we can store an "unsorted"
-				// item. In this next loop we use it to insert our new item and then
-				// rotate every item right one spot in the final list.
-				for k := j; k < i; k++ {
-					list.Swap(k, i)
-				}
-			}
+	for i, j := 1, 1; i < list.Len(); i, j = i+1, i+1 {
+		for (j > 0) && list.Less(j, j-1) {
+			list.Swap(j, j-1)
+			j--
 		}
 	}
 }

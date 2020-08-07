@@ -19,3 +19,7 @@ func TestInsertionSortString(t *testing.T) {
 func TestInsertionSortInterface(t *testing.T) {
 	TestInterface(t, InsertionSort)
 }
+
+func BenchmarkInsertionSortInterface(b *testing.B) {
+	BenchmarkInterface(b, InsertionSort)
+}
