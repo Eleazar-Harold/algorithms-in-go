@@ -64,8 +64,8 @@ func BubbleSortPerson(people []Person) {
 	}
 }
 
-// BubbleSort uses the standard library's sort.Interface to sort. Try
-// implementing it for practice.
+// BubbleSort sorts the given sortable item using Bubble Sort algorithm
+// https://en.wikipedia.org/wiki/Bubble_sort
 func BubbleSort(list sort.Interface) {
 	for i := 0; i < list.Len(); i++ {
 		swapped := false
