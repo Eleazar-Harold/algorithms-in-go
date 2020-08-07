@@ -23,7 +23,6 @@ func quickSort(s sort.Interface, beg int, end int) {
 			e--
 		}
 		if b <= e {
-			// Si cambiamos donde estaba el pivote, hay que actualizar su posición
 			if b == pi {
 				pi = e
 			} else if e == pi {
