@@ -58,8 +58,8 @@ func SelectionSortPerson(people []Person) {
 	}
 }
 
-// SelectionSort uses the standard library's sort.Interface to sort. Try
-// implementing it for practice.
+// SelectionSort sorts the given sortable item using Selection Sort algorithm
+// https://en.wikipedia.org/wiki/Selection_sort
 func SelectionSort(list sort.Interface) {
 	for i := 0; i < list.Len(); i++ {
 		lowestIndex := i
