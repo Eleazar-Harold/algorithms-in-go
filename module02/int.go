@@ -31,8 +31,11 @@ func TestInt(t *testing.T, sortFn func([]int)) {
 		"random-len50":     rand.Perm(50),
 		"random-len100":    rand.Perm(100),
 		"random-len1000":   rand.Perm(1000),
+		"random-len10000":  rand.Perm(10000),
 		"random-len100000": rand.Perm(100000),
-		// "sorted-len100000": intList(100000),
+		"sorted-len1000":   intList(1000),
+		"sorted-len10000":  intList(10000),
+		"sorted-len100000": intList(100000),
 	} {
 		t.Run(name, func(t *testing.T) {
 			want := make([]int, len(list))

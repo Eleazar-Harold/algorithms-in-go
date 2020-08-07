@@ -16,17 +16,19 @@ func TestInterface(t *testing.T, sortFn func(sort.Interface)) {
 	rand.Seed(seed)
 
 	for name, list := range map[string][]int{
-		"sorted":          []int{1, 2, 3, 4},
-		"reverse":         []int{10, 9, 8, 7, 6, 5, 4, 3, 2, 1},
-		"duplicates":      []int{3, 5, 3, 5, 3, 5},
-		"random-len10":    rand.Perm(10),
-		"random-len20":    rand.Perm(20),
-		"random-len50":    rand.Perm(50),
-		"random-len100":   rand.Perm(100),
-		"random-len1000":  rand.Perm(1000),
-		"random-len10000": rand.Perm(10000),
-		"sorted-len10000": intList(10000),
-		"sorted-len1000":  intList(1000),
+		"sorted":           []int{1, 2, 3, 4},
+		"reverse":          []int{10, 9, 8, 7, 6, 5, 4, 3, 2, 1},
+		"duplicates":       []int{3, 5, 3, 5, 3, 5},
+		"random-len10":     rand.Perm(10),
+		"random-len20":     rand.Perm(20),
+		"random-len50":     rand.Perm(50),
+		"random-len100":    rand.Perm(100),
+		"random-len1000":   rand.Perm(1000),
+		"random-len10000":  rand.Perm(10000),
+		"random-len100000": rand.Perm(100000),
+		"sorted-len1000":   intList(1000),
+		"sorted-len10000":  intList(10000),
+		"sorted-len100000": intList(100000),
 	} {
 		t.Run(name, func(t *testing.T) {
 			want := make([]int, len(list))
