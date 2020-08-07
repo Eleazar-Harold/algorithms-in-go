@@ -66,12 +66,12 @@ func BubbleSortPerson(people []Person) {
 
 // BubbleSort sorts the given sortable item using Bubble Sort algorithm
 // https://en.wikipedia.org/wiki/Bubble_sort
-func BubbleSort(list sort.Interface) {
-	for i := 0; i < list.Len(); i++ {
+func BubbleSort(s sort.Interface) {
+	for i := 0; i < s.Len(); i++ {
 		swapped := false
-		for j := 0; j < list.Len()-1-i; j++ {
-			if list.Less(j+1, j) {
-				list.Swap(j, j+1)
+		for j := 0; j < s.Len()-1-i; j++ {
+			if s.Less(j+1, j) {
+				s.Swap(j, j+1)
 				swapped = true
 			}
 		}
