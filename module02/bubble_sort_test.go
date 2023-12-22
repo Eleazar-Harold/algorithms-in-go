@@ -1,6 +1,8 @@
 package module02
 
-import "testing"
+import (
+	"testing"
+)
 
 func TestBubbleSortInt(t *testing.T) {
 	TestInt(t, BubbleSortInt)
@@ -20,4 +22,8 @@ func TestBubbleSortInterface(t *testing.T) {
 
 func BenchmarkBubbleSortInterface(b *testing.B) {
 	BenchmarkInterface(b, BubbleSort)
+}
+
+func TestBubbleSortPerson(t *testing.T) {
+	TestPeopleInterface(t, BubbleSortPerson)
 }

@@ -1,4 +1,4 @@
-package bigo
+package module02
 
 import (
 	"fmt"
